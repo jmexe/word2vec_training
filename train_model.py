@@ -59,11 +59,12 @@ def train_wiki(file_path):
     sentences = MySentences(file_path)
     model = gensim.models.Word2Vec(sentences)
 
-    model.save("./wiki9")
     return model
 
 
 if __name__ == '__main__':
+    """
+    # A sample that trains a model using your own text
     text = "Police say a wrong-way driver struck the front of a construction truck and went airborne, causing five injuries in Lowell." \
            "According to Lowell Police, a 76-year-old Lowell woman drove the wrong way down Appleton Street into a construction site. Her husband was riding in the car with her." \
            "After speeding around a traffic jam, her car crashed into the back of a New England Utility Constructors Inc. Bobcat machine. The Bobcat spun around into a construction worker, launching him 30 feet into the air." \
@@ -76,3 +77,7 @@ if __name__ == '__main__':
     model = train_your_own(text, None)
 
     print model["worker"]
+    """
+
+    #A sample that trains a model using First billion characters from wikipedia
+    model = train_wiki("")
