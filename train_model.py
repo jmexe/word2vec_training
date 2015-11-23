@@ -80,4 +80,5 @@ if __name__ == '__main__':
     """
 
     #A sample that trains a model using First billion characters from wikipedia
-    model = train_wiki("")
+    file_path = ""
+    model = train_wiki(file_path)
